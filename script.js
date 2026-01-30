@@ -90,3 +90,19 @@ scrollTopBtn.addEventListener('click', () => {
     behavior: 'smooth'
   });
 });
+/* WhatsApp Button Click */
+const whatsappBtn = document.getElementById("whatsappBtn");
+
+if (whatsappBtn) {
+  whatsappBtn.addEventListener("click", function (e) {
+    e.preventDefault();
+
+    const phoneNumber = "917304089933"; // country code + number
+    const message = "Hello, I want to enquire about SmartByte Computer Education courses.";
+
+    const whatsappURL =
+      "https://wa.me/" + phoneNumber + "?text=" + encodeURIComponent(message);
+
+    window.open(whatsappURL, "_blank");
+  });
+}
